@@ -91,7 +91,17 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  //let a = 0;
+  //let b = 0;
+  //numbers.sort ((a, b) => a - b);
+  //return { min: numbers[0], max: numbers[numbers.length - 1]};
+
+  let min = numbers[0];
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) min = numbers[i];
+  }
+  return min
 }
 
 /**
