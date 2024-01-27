@@ -18,6 +18,9 @@ for (let i = 0; i < stringArray.length; i++) {
   numbers.push(number);
 }
 
+
+
+
 // Peform some calculations on the numbers.
 console.log(numbers);
 console.log(`You have given ${getLength(numbers)} numbers.`);
@@ -32,20 +35,43 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
 // === EDIT THE CODE BELOW ===
 // Complete the functions below to make the program work!
 
+//const myNumbers = ["1", "2", "3", "4", "5"]
+
+//console.log(myNumbers)
+
+const myNumbers = ["1", "2", "3", "4", "5"]
+
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  const output = [];
+  for (let i = 0; i <= 4; i++) {
+    output.push(numbers[i])
+  }
+  return output;
 }
+
+console.log(getLength(myNumbers))
+  // TODO
+  //const numbers =
+
+
+  
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
+
 function getSum(numbers) {
-  // TODO
+  let sum = 0;
+  
+  for (const number of numbers) {
+    sum = sum + number
+  }
+  return sum;
 }
 
 /**
@@ -53,8 +79,12 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
-}
+  const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const average = sum / numbers.length;
+
+  return sum / average;
+  }
+
 
 /**
  * @param {number[]} numbers an array of integers
