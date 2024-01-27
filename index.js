@@ -54,11 +54,7 @@ function getLength(numbers) {
 }
 
 console.log(getLength(myNumbers))
-  // TODO
-  //const numbers =
-
-
-  
+ 
 
 /**
  * @param {number[]} numbers an array of integers
@@ -109,15 +105,28 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let max = numbers[0];
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) max = numbers[i];
+  }
+  return max
 }
+
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+ let max = numbers[0];
+ let min = max;
+
+ for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > max) max = numbers[i];
+  if (numbers[i] < min) min = numbers[i];
+ }
+ return max - min;
 }
 
 /**
@@ -125,7 +134,13 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+let even = [];
+
+for(let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 == 0)
+  even.push(numbers[i]);
+}
+return even;
 }
 
 /**
@@ -133,5 +148,11 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  let odds = [];
+
+for(let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 == 1)
+  odds.push(numbers[i]);
+}
+return odds;
 }
